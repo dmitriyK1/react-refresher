@@ -36,3 +36,17 @@ componentWillUnmount() {}
 propTypes: {
     txt: React.PropTypes.string.isRequired
 }
+
+render() {
+    return <div data-rendered="true"></div>                   // append data- to show attribute in resulting html
+}
+
+render() {
+    return { this.state.items.map( item => <Element key={item.id} someData={item.value} /> ) }
+}
+
+// if/else usage in jsx
+    return (<div>
+        { true ? 'yes' : 'no' }
+        { true && 777         }
+    </div>)
