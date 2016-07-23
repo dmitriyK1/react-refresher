@@ -33,6 +33,13 @@ componentWillMount() {}
 componentDidMount() {}
 componentWillUnmount() {}
 
+shouldComponentUpdate(nextProps, nextState, c) {
+    return nextState.value % 2 === 0;
+}
+
+componentWillUpdate(nextProps, nextState) {}
+componentDidUpdate(prevProps, prevState, rootNode) {}
+
 propTypes: {
     txt: React.PropTypes.string.isRequired
 }
@@ -50,3 +57,40 @@ render() {
         { true ? 'yes' : 'no' }
         { true && 777         }
     </div>)
+
+
+
+
+var ReactMixin = {
+    componentWillMount() { }
+};
+
+React.createClass({
+
+    mixins: [ReactMixin],
+
+    render() {},
+
+    componentWillMount() {}
+});
+
+var List = React.createClass({
+
+    getInitialState() {
+
+        return {
+        people: [{ id:0, name: 'foo' }, { id:1, name: 'bar'},{ id: 3, name: 'baz' }]
+        };
+
+    },
+
+    render() {
+        return <section>
+        { this.state.people.map(function(person) {
+            return <ListItem key={person.id} data={person.name} />
+        })
+        }
+        </section>
+    }
+
+});
