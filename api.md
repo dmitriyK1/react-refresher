@@ -48,10 +48,6 @@ render() {
     return <div data-rendered="true"></div>                   // append data- to show attribute in resulting html
 }
 
-render() {
-    return { this.state.items.map( item => <Element key={item.id} someData={item.value} /> ) }
-}
-
 // if/else usage in jsx
     return (<div>
         { true ? 'yes' : 'no' }
@@ -74,23 +70,40 @@ React.createClass({
     componentWillMount() {}
 });
 
+
+
+
+
+// dynamically generating elements
+render() {
+    return { this.state.items.map( item => <Element key={item.id} someData={item.value} /> ) }
+}
+
 var List = React.createClass({
 
     getInitialState() {
 
         return {
-        people: [{ id:0, name: 'foo' }, { id:1, name: 'bar'},{ id: 3, name: 'baz' }]
+            people: [{ id:0, name: 'foo' }, { id:1, name: 'bar'},{ id: 3, name: 'baz' }]
         };
 
     },
 
     render() {
         return <section>
-        { this.state.people.map(function(person) {
-            return <ListItem key={person.id} data={person.name} />
-        })
+            { this.state.people.map(function(person) {
+                return <ListItem key={person.id} data={person.name} />
+            })
         }
         </section>
     }
 
 });
+
+
+// stateless component
+var App = function() {
+    return <div>this is a functional stateless component</div>;
+}
+
+ReactDOM.render( <App/>, app );
