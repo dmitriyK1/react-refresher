@@ -9,3 +9,5 @@
 
 - eslint presets:
     https://github.com/walmartlabs/eslint-config-defaults
+
+https://hashnode.com/post/if-you-had-to-learn-react-all-over-again-what-would-be-your-path-cimjb5c8x00d64s53owxa2wgz
