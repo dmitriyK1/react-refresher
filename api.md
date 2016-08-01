@@ -1,3 +1,22 @@
+================================================================================
+ES6
+================================================================================
+
+componentWillMount() {
+    // component not in the DOM yet
+    // access only to state & props
+}
+
+componentDidMount() {
+    // by this time we have access to a DOM element
+    var domElement = React.findDOMNode(this);
+}
+
+componentWillUnmount() {
+    // do cleanup here
+}
+
+================================================================================
 
 React.createClass
 
@@ -16,7 +35,7 @@ this.replaceState( this.getInitialState() )
 this.props.firstName
 this.state.time
 this.refs.input
-this.refs.slider.refs.input
+this.refs.slider.refs.input                       // nested refs
 
 <input value={this.state.value} onChange={this.onChange} />
 
