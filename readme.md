@@ -1,3 +1,5 @@
+  https://web-design-weekly.com/2015/01/29/opinionated-guide-react-js-best-practices-conventions/
+  https://github.com/airbnb/javascript/tree/master/react
 - https://github.com/Khan/style-guides/blob/master/style/react.md
 - https://medium.com/front-end-hacking/structuring-react-and-redux-applications-255361d24f84#.di7xh5ysz
 - https://github.com/airbnb/javascript/tree/master/react
