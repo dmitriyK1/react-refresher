@@ -26,6 +26,13 @@ ReactDOM.unmountComponentAtNode
 
 getInitialState() {}
 
+// state callback
+this.setState({ visible: true }, () => alert('done') );
+
+# нельзя вызывать setState в render: реакт
+видит изменилось состояние - начинает перерисовывать компонент - видит что
+изменилось состояние - начинает перерисовывать компонент...
+
 getDefaultProps() {}
 
 this.setState({})
@@ -60,7 +67,22 @@ componentWillUpdate(nextProps, nextState) {}
 componentDidUpdate(prevProps, prevState, rootNode) {}
 
 propTypes: {
-    txt: React.PropTypes.string.isRequired
+
+    txt: React.PropTypes.string.isRequired,
+
+    optionalUnion: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.number,
+        React.PropTypes.instanceOf(Message)
+    ]),
+
+    optionalObjectWithShape: React.PropTypes.shape({
+        color: React.PropTypes.string,
+        fontSize: React.PropTypes.number
+    }),
+
+    requiredAny: React.PropTypes.any.isRequired
+
 }
 
 render() {
