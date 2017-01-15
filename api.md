@@ -9,7 +9,7 @@ componentWillMount() {
 
 componentDidMount() {
     // by this time we have access to a DOM element
-    var domElement = React.findDOMNode(this);
+    var domElement = ReactDOM.findDOMNode(this);
 }
 
 componentWillUnmount() {
