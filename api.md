@@ -2,6 +2,11 @@
 ES6
 ================================================================================
 
+JSX conditionals - wrap complex logic in IIFE:
+https://cdn-images-1.medium.com/max/2000/1*IVFlMaSGKqHISJueTC26sw.png
+
+================================================================================
+
 // Use default arguments instead of defaultProps for stateless components:
 function ExpandableForm({ onExpand, expanded = false, children }) {}
 
