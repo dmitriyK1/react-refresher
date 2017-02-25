@@ -2,6 +2,11 @@
 ES6
 ================================================================================
 
+// Use default arguments instead of defaultProps for stateless components:
+function ExpandableForm({ onExpand, expanded = false, children }) {}
+
+================================================================================
+
 componentWillMount() {
     // component not in the DOM yet
     // access only to state & props
